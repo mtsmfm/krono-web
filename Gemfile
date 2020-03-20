@@ -20,6 +20,9 @@ gem 'sqlite3'
 gem 'puma'
 gem 'webpacker', github: 'rails/webpacker'
 gem 'bootsnap'
+gem 'pry', github: 'pry/pry' # https://github.com/pry/pry/pull/2110
+gem 'pry-byebug', github: 'deivid-rodriguez/pry-byebug'
+gem 'pry-rails'
 
 group :development do
   gem 'web-console', github: 'rails/web-console'
