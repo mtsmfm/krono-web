@@ -13,7 +13,7 @@ Bundler::Source::Git::GitProxy.prepend(Module.new do
   end
 end)
 
-ruby '2.7.0'
+ruby '2.7.1'
 
 gem 'rails', github: 'rails/rails', branch: 'master'
 gem 'sqlite3'

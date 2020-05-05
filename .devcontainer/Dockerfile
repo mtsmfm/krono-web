@@ -1,12 +1,12 @@
-FROM ruby:2.7.0-buster
+FROM ruby:2.7.1-buster
 
-COPY --from=node:12.16.1-buster /usr/local /usr/local
-COPY --from=node:12.16.1-buster /opt /opt
+COPY --from=node:14.1.0-buster /usr/local /usr/local
+COPY --from=node:14.1.0-buster /opt /opt
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 RUN apt-get update \
-  && apt-get install -y zsh less autossh
+  && apt-get install -y zsh less
 
 RUN useradd --create-home --user-group --uid 1000 app
 RUN mkdir -p /app /original $BUNDLE_PATH
