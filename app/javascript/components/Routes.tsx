@@ -9,11 +9,8 @@ export const Routes: React.FC<{ path: string }> = ({ path }) => {
       return <Provider store={store}>
         <style dangerouslySetInnerHTML={{
           __html: `
-          .sc-giadOv {
-            margin-top: 64px;
-          }
           .sc-fONwsr {
-            height: calc(100vh - 130px);
+            height: calc(100vh - 200px);
           }
           .sc-EHOje {
             font-size: 0px;
