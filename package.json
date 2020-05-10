@@ -20,6 +20,7 @@
     "firebase": "^7.14.3",
     "graphql-playground-react": "^1.7.22",
     "graphql-ruby-client": "^1.7.8",
+    "haikunator": "^2.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
