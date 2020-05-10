@@ -17,6 +17,7 @@
     "apollo-link": "^1.2.14",
     "apollo-link-http": "^1.5.17",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "firebase": "^7.14.3",
     "graphql-playground-react": "^1.7.22",
     "graphql-ruby-client": "^1.7.8",
     "prop-types": "^15.7.2",
