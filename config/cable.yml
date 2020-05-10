@@ -1,8 +1,10 @@
 development:
-  adapter: async
+  adapter: redis
+  url: redis://redis
 
 test:
-  adapter: test
+  adapter: redis
+  url: redis://redis
 
 production:
   adapter: redis

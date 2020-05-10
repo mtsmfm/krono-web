@@ -1,18 +1,12 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { Playground, store, setSettingsString } from 'graphql-playground-react';
+import { Playground, store } from 'graphql-playground-react';
+import { link } from '../client';
 
 export const Routes: React.FC<{ path: string }> = ({ path }) => {
   switch (path) {
     case '/graphql-playground':
       return <Provider store={store}>
-        {
-          React.useEffect(() => {
-            store.dispatch(
-              setSettingsString(JSON.stringify({ 'request.credentials': 'include' }))
-            )
-          })
-        }
         <style dangerouslySetInnerHTML={{
           __html: `
           .sc-giadOv {
@@ -27,9 +21,7 @@ export const Routes: React.FC<{ path: string }> = ({ path }) => {
         `}} />
         <Playground
           endpoint="/graphql"
-          headers={{
-            'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-          }}
+          createApolloLink={() => { return { link }; }}
         />
       </Provider>;
     default:
