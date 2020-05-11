@@ -35,14 +35,11 @@ export const Layout: React.FC = ({ children }) => {
       </Toolbar>
     </AppBar>
     <Drawer open={open} onClose={() => setOpen(false)}>
-      <Button>
-        Foo
+      <Button href="/">
+        Top
       </Button>
-      <Button>
-        Bar
-      </Button>
-      <Button>
-        Baz
+      <Button href="/graphql-playground">
+        GraphQL Playground
       </Button>
     </Drawer>
     <main>
