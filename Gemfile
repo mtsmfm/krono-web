@@ -25,6 +25,7 @@ gem 'pry-byebug', github: 'deivid-rodriguez/pry-byebug'
 gem 'pry-rails'
 gem 'graphql'
 gem 'redis'
+gem 'jwt'
 
 group :development do
   gem 'web-console', github: 'rails/web-console'

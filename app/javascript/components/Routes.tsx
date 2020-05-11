@@ -1,27 +1,26 @@
 import * as React from 'react';
-import { Provider } from 'react-redux';
-import { Playground, store } from 'graphql-playground-react';
-import { link } from '../client';
+import { Game } from './Game';
+import { GraphQLPlayground } from './GraphQLPlayground';
 
-export const Routes: React.FC<{ path: string }> = ({ path }) => {
+export const Routes: React.FC = () => {
+  const [path, setPath] = React.useState(window.location.pathname);
+
+  React.useEffect(() => {
+    const onpopstate = () => {
+      setPath(window.location.pathname);
+    }
+
+    window.addEventListener('popstate', onpopstate);
+
+    return () => {
+      window.removeEventListener('popstate', onpopstate);
+    }
+  }, []);
+
   switch (path) {
     case '/graphql-playground':
-      return <Provider store={store}>
-        <style dangerouslySetInnerHTML={{
-          __html: `
-          .sc-fONwsr {
-            height: calc(100vh - 200px);
-          }
-          .sc-EHOje {
-            font-size: 0px;
-          }
-        `}} />
-        <Playground
-          endpoint="/graphql"
-          createApolloLink={() => { return { link }; }}
-        />
-      </Provider>;
+      return <GraphQLPlayground />;
     default:
-      return <>Hello</>;
+      return <Game />;
   }
 }
