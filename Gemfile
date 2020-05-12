@@ -16,7 +16,6 @@ end)
 ruby '2.7.1'
 
 gem 'rails', github: 'rails/rails', branch: 'master'
-gem 'sqlite3'
 gem 'puma'
 gem 'webpacker', github: 'rails/webpacker'
 gem 'bootsnap'
@@ -26,6 +25,8 @@ gem 'pry-rails'
 gem 'graphql'
 gem 'redis'
 gem 'jwt'
+gem 'google-cloud-firestore', require: 'google/cloud/firestore'
+gem 'google-protobuf', '3.12.0.rc.1'
 
 group :development do
   gem 'web-console', github: 'rails/web-console'
