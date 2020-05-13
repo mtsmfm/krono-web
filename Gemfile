@@ -27,6 +27,8 @@ gem 'redis'
 gem 'jwt'
 gem 'google-cloud-firestore', require: 'google/cloud/firestore'
 gem 'google-protobuf', '3.12.0.rc.1'
+gem 'google-api-client', require: 'google/apis/identitytoolkit_v3'
+gem 'googleauth'
 
 group :development do
   gem 'web-console', github: 'rails/web-console'
