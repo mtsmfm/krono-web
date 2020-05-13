@@ -1,22 +1,9 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { Playground, store } from 'graphql-playground-react';
-import { buildApolloLink } from '../utils/apollo';
-import { ApolloLink } from 'apollo-link';
+import { link } from '../utils/apollo';
 
 export const GraphQLPlayground: React.FC = () => {
-  const [link, setLink] = React.useState<ApolloLink>();
-
-  React.useEffect(() => {
-    (async () => {
-      setLink(await buildApolloLink());
-    })();
-  }, []);
-
-  if (!link) {
-    return null;
-  }
-
   return <Provider store={store}>
     <style dangerouslySetInnerHTML={{
       __html: `

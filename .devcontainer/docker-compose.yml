@@ -21,8 +21,6 @@ services:
     ports:
       - 80:3000
       - 3035:3035
-  redis:
-    image: redis:6.0.1-alpine
 volumes:
   app:
   home:
